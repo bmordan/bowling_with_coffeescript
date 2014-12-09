@@ -24,7 +24,12 @@ describe 'You play like this', ->
     expect(bowling.score()).to.equal 10
 
   it 'automatically adds frames as the game goes along', ->
-    bowling.add(1) for [1..3]
+    bowling.add(1) for [1..5]
+    expect(bowling.frames.length).to.equal 3
+
+  it 'automagically adds a new frame after a strike', ->
+    bowling.add(10)
+    bowling.add(2)
     expect(bowling.frames.length).to.equal 2
 
   xit 'a spare gets a bonus which is the value of the next bowl', ->
