@@ -24,6 +24,9 @@ describe 'Bonus aspect of a frame', ->
   beforeEach ->
     frame = new Frame
 
+  it 'has an index', ->
+    expect(frame.index).to.equal 0
+
   it 'indicates a spare has been achieved', ->
     frame.throws.push(5)
     frame.throws.push(5)

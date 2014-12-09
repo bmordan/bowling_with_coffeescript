@@ -32,7 +32,13 @@ describe 'You play like this', ->
     bowling.add(2)
     expect(bowling.frames.length).to.equal 2
 
-  xit 'a spare gets a bonus which is the value of the next bowl', ->
+  it 'manage bonuses takes care of awarding bonus points', ->
+   bowling.add(3)
+   bowling.add(7)
+   bowling.add(5)
+   expect(bowling.frames[0].throws[2]).to.equal 5
+
+  it 'a spare gets a bonus which is the value of the next bowl', ->
     bowling.add(3)
     bowling.add(7)
     bowling.add(5)

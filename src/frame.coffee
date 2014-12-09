@@ -2,6 +2,7 @@ class Frame
 
   constructor: ->
     @throws = []
+    @index = 0
 
   total: ->
     @throws.reduce (total, throws) -> total + throws
