@@ -15,6 +15,7 @@ class Bowling
     @frames.reduce ( (score, frame) -> score + frame.total() ), 0
 
   _manageFrames: (index)->
+    return if @frames.length == 10
     if _.last(@frames).throws[0] == 10 then @frames.push(new Frame)
     if _.last(@frames).throws.length == 2 then @frames.push(new Frame)
     _.each @frames, (frame) -> frame.index = index+=1
@@ -37,6 +38,12 @@ class Bowling
 
   _manageSpecials: (index) ->
     return if @frames[index+1] == undefined
-    @frames[index-1].throws[2] = @frames[index+1].throws[0]
+    if index == 9
+      @_manageFinalFrame()
+    else
+      @frames[index-1].throws[2] = @frames[index+1].throws[0]
+
+  _manageFinalFrame: ->
+    console.log "Game over"
 
 module.exports = Bowling
