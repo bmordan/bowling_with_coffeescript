@@ -1,5 +1,5 @@
 _ = require 'underscore'
-Frame = require './frame'
+# Frame = require './frame'
 
 class Frames
 

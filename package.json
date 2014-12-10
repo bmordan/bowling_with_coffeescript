@@ -1,7 +1,7 @@
 {
   "name": "justCoffee",
-  "version": "0.0.1",
-  "description": "just messing",
+  "version": "0.3.2",
+  "description": "another 10 pin bowling program",
   "main": "brew.js",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register -R spec"

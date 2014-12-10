@@ -1,5 +1,5 @@
 _ = require 'underscore'
-Frames = require './scoringModule'
+# Frames = require './scoringModule'
 
 class Bowling
 
