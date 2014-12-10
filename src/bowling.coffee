@@ -21,9 +21,22 @@ class Bowling
 
   _manageBonuses: (index) ->
     if index == 0 then return
-    if @frames[index-1].isSpare() then @_manageSpares(index-1)
+    if @frames[index-1].isSpare()  then @_manageSpares(index)
+    if @frames[index-1].isStrike() then @_manageStrikes(index)
+    @_manageBonuses(index-=1)
 
   _manageSpares: (index) ->
-    @frames[index].throws[2] = @frames[index+1].throws[0]
+    @frames[index-1].throws[2] = @frames[index].throws[0]
+
+  _manageStrikes: (index) ->
+    @frames[index-1].throws[1] = @frames[index].throws[0]
+    if @frames[index].isStrike()
+      @_manageSpecials(index)
+    else
+      @frames[index-1].throws[2] = @frames[index].throws[1]
+
+  _manageSpecials: (index) ->
+    return if @frames[index+1] == undefined
+    @frames[index-1].throws[2] = @frames[index+1].throws[0]
 
 module.exports = Bowling

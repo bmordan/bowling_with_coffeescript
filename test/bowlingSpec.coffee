@@ -40,7 +40,21 @@ describe 'Bonus Scoreing', ->
     bowling = new Bowling()
 
   it 'the most simple bonus is the spare', ->
-   bowling.add(3)
-   bowling.add(7)
-   bowling.add(5)
-   expect(bowling.score()).to.equal 20
+    bowling.add(3)
+    bowling.add(7)
+    bowling.add(5)
+    expect(bowling.score()).to.equal 20
+
+  it 'next is the single strike', ->
+    bowling.add(10)
+    bowling.add(1)
+    bowling.add(1)
+    expect(bowling.score()).to.equal 14
+
+  it 'then its the double', ->
+    bowling.add(10) for [1..2]
+    expect(bowling.score()).to.equal 30
+
+  it 'then the turkey', ->
+    bowling.add(10) for [1..3]
+    expect(bowling.score()).to.equal 60
