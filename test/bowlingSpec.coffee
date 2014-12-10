@@ -25,12 +25,12 @@ describe 'You play like this', ->
 
   it 'automatically adds frames as the game goes along', ->
     bowling.add(1) for [1..5]
-    expect(bowling.frames.length).to.equal 3
+    expect(bowling.game.frames.length).to.equal 3
 
   it 'automagically adds a new frame after a strike', ->
     bowling.add(10)
     bowling.add(2)
-    expect(bowling.frames.length).to.equal 2
+    expect(bowling.game.frames.length).to.equal 2
 
 describe 'Bonus Scoreing', ->
 
