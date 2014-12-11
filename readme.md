@@ -1,5 +1,6 @@
 #10 Pin Bowling
 ##rendered in coffeescript
+[![Code Climate](https://codeclimate.com/github/bmordan/bowling_with_coffeescript/badges/gpa.svg)](https://codeclimate.com/github/bmordan/bowling_with_coffeescript)
 ![enter image description here](http://www.julienslive.com/images/lot/6284/62841_0.jpg)
 
 This problem I found very hard to solve. Of all the weekend challanges we were given at makers this one stumped me. However, I love the problem. I returned to it after the course, it took two days to have a basic working script.
