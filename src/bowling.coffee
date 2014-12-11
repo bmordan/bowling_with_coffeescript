@@ -1,4 +1,7 @@
-Frames = require './scoringModule'
+try
+  Frames = require './scoringModule'
+catch err
+  
 _ = require 'underscore'
 
 class Bowling

@@ -1,4 +1,7 @@
-Frame = require './frame'
+try
+  Frame = require './frame'
+catch err
+
 _ = require 'underscore'
 
 class Frames
