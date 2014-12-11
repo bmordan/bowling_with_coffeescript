@@ -2,7 +2,7 @@
 ##rendered in coffeescript
 ![enter image description here](http://www.julienslive.com/images/lot/6284/62841_0.jpg)
 
-This problem I found very hard to solve. Of all the weekend challanges we were given a makers this one stumped me. However, I love the problem. I returned to it after the course, it took two days to have a basic working script.
+This problem I found very hard to solve. Of all the weekend challanges we were given at makers this one stumped me. However, I love the problem. I returned to it after the course, it took two days to have a basic working script.
 
 once you have cloned the repo here is how to play with it. Load the compiled lib/bowling.js into node like this:
 

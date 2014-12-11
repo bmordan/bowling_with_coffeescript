@@ -1,5 +1,5 @@
+Frame = require './frame'
 _ = require 'underscore'
-# Frame = require './frame'
 
 class Frames
 
@@ -26,7 +26,11 @@ class Frames
     if @frames[index].isStrike()
       @_manageSpecials(index)
     else
-      @frames[index-1].throws[2] = @frames[index].throws[1]
+      @_manageSecondStrikeBonus(index)
+
+  _manageSecondStrikeBonus: (index) ->
+    return if @frames[index].throws[1] == undefined
+    @frames[index-1].throws[2] = @frames[index].throws[1]
 
   _manageSpecials: (index) ->
     return if @frames[index+1] == undefined

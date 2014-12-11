@@ -1,3 +1,4 @@
+# Warning this line is chopped off on compile
 class Frame
 
   constructor: ->

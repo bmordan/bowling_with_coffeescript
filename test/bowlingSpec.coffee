@@ -113,3 +113,10 @@ describe 'Test games', ->
     bowling.add(7)
     bowling.add(4)
     expect(bowling.score()).to.equal 135
+
+  it 'BUG it does not add undefined to a strike', ->
+    bowling.add(1)
+    bowling.add(1)
+    bowling.add(10)
+    bowling.add(3)
+    expect(bowling.score()).to.equal 18
