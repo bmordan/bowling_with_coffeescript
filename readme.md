@@ -7,7 +7,6 @@ This problem I found very hard to solve. Of all the weekend challanges we were g
 once you have cloned the repo here is how to play with it. Load the compiled lib/bowling.js into node like this:
 
 >$node
->require('coffee-script')
 >Bowling = require('./lib/bowling')
 >player = new Bowling()
 
@@ -18,7 +17,7 @@ Then play like this:
 >player.score()
 >10
 
-There is no error checking this is just the core functionality. I love reading back the compiled machine generated Javascript, and really enjoy working with coffeescript.
+There is no error checking this is just the core functionality. I love reading back the compiled machine generated Javascript, and really enjoy working with coffeescript. I even created a Cakefile and added a simple task to build a single bowling.js file.
 
 Here are the passing tests:
 
